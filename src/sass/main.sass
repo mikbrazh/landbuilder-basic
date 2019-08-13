@@ -1,0 +1,221 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+@import "_mixins/emizer"
+
+::placeholder
+  color: #c0c0c0
+
+::selection
+  color: #ffffff
+  background-color: $accent-yellow
+
+body
+  position: relative
+  overflow-x: hidden
+  min-width: 320px
+  color: $text-bright
+  font-family: $paragraph-font
+  font-size: $browser-context
+  line-height: 1.65
+  input, textarea
+    margin: 0
+    padding: 0
+    outline: none
+
+.img-responsive
+  display: block
+  max-width: 100%
+  height: auto
+  &.img-width
+    width: 100%
+
+b, strong
+  font-weight: bold
+
+a:hover
+  text-decoration: none
+
+ul
+  margin: 0
+  padding: 0
+  list-style: none
+
+h1, h2, h3, h4, h5, h6
+  margin: 0
+  padding: 0
+  font-family: $title-font
+
+h2
+  font-size: em(36px)
+
+p
+  margin: 0
+  padding: 0
+
+.text-center
+  text-align: center
+
+.example-img
+  width: 100%
+
+.lazy-container // Lazy Load Placeholder Generator: https://webdesign-master.ru/services/lazy/
+  background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7)
+
+// ------------------------------
+// CUSTOM SASS
+// ------------------------------
+
+// ------------------------------
+// HEADER OPENED
+// ------------------------------
+.main-header
+  position: relative
+  margin-bottom: em(120px)
+  width: 100%
+  height: 80px
+  background-color: #4d4d4d
+
+.logo
+  position: relative
+  height: 80px
+
+.logo__icon
+  position: absolute
+  top: 50%
+  margin-top: -25px
+  width: 50px
+  height: 50px
+  border-radius: 50%
+  background-color: #e6e6e6
+  cursor: pointer
+
+.logo__text
+  position: absolute
+  left: 60px
+  font-family: $paragraph-font
+  font-size: em(12px)
+  letter-spacing: 0.9px
+  line-height: 80px
+  color: $text-bright
+
+.main-nav__item
+  display: inline-block
+  margin-right: em(50px)
+  font-family: $paragraph-font
+  font-size: em(16px)
+  line-height: 80px
+  letter-spacing: 1.2px
+  color: $text-bright
+  transition: all 0.5s ease
+  cursor: pointer
+  a
+    color: $text-bright
+    &:hover
+      color: #cccccc
+  +media-breakpoint-down(lg)
+    font-size: em(14px)
+    margin-right: em(45px)
+  &:last-child
+    margin-right: 0
+
+.phone
+  height: 80px
+  text-align: right
+  +media-breakpoint-down(md)
+    padding-right: 80px
+  +media-breakpoint-down(sm)
+    padding-right: 0
+    margin-top: 3px
+
+.phone__icon
+  margin-right: 10px
+  color: $text-bright
+  font-size: em(20px)
+  +media-breakpoint-down(lg)
+    font-size: em(18px)
+  +media-breakpoint-down(sm)
+    color: $text-dark
+
+.phone__number
+  line-height: 80px
+  font-size: em(22px)
+  color: $text-bright
+  letter-spacing: 1.65px
+  &:hover
+    color: $text-bright
+  +media-breakpoint-down(lg)
+    font-size: em(20px)
+  +media-breakpoint-down(sm)
+    color: $text-dark
+    line-height: normal
+
+.hamburger
+  position: absolute
+  top: 13px
+  right: 0
+
+.w-100
+  display: none
+  +media-breakpoint-down(sm)
+    display: block
+// ------------------------------
+// HEADER CLOSED
+// ------------------------------
+
+// ------------------------------
+// SECTION-1 OPENED
+// ------------------------------
+.main-offer__text
+  font-size: em(36px)
+  font-weight: bold
+  letter-spacing: 2.7px
+  line-height: 1
+  text-align: center
+  color: $text-dark
+  +media-breakpoint-down(sm)
+    font-size: em(34px)
+
+.main-offer__subtext
+  margin-bottom: em(58px)
+  font-size: em(16px)
+  font-weight: bold
+  letter-spacing: 1.2px
+  text-align: center
+  color: #b3b3b3
+  +media-breakpoint-down(sm)
+    margin-bottom: em(140px)
+    font-size: em(12px)
+
+.main-offer__button
+  margin-bottom: em(80px)
+  width: 350px
+  height: 80px
+  font-size: em(20px)
+  font-weight: bold
+  letter-spacing: 1.5px
+  text-transform: uppercase
+  color: $text-bright
+  border: none
+  background-color: #555555
+  cursor: pointer
+  transition: all 0.5s ease
+  &:hover
+    background-color: #717171
+  +media-breakpoint-down(sm)
+    font-size: em(16px)
+    height: 70px
+    width: 260px
+
+.mouse-scroll
+  cursor: pointer
+  +media-breakpoint-down(sm)
+    display: none
+
+
+// ------------------------------
+// SECTION-1 CLOSED
+// ------------------------------
+
+
+@import "media" // Медиа запросы. Всегда в конце.
